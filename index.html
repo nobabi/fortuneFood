@@ -4,25 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Mega Menu</title>
+    <title>Fortune Food</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+  
+
+
+    <style>
+        .font-Inter{
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+
+        }
+
+         /* .button */
+ .button {
+    display: inline-block;
+    position: relative;
+    border: 0px solid #004B84;
+    background: red;
+    padding: 8px 25px;
+    /* -webkit-border-radius: 16px; */
+    /* -moz-border-radius: 16px; */
+    /* border-radius: 16px; */
+     color: #ffffff;
+    font-size: 12px;
+    /* font-family: Questrial;  */
+    text-decoration: none;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Shadow all around */
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  }
+  .button:hover { background: red; 
+    background: linear-gradient(135deg, #ff4c4c, #d40000); /* Darker gradient on hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+  .button span {
+      transition: 0.6s;
+      transition-delay: 0.2s;
+  }
+  .button:before,
+  .button:after {
+      content: '';
+      position: absolute;
+      top: 0.67em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: .4s,opacity .6s;
+  }
+
+  /* :before */
+  .button:before {
+      content: attr(data-hover);
+      transform: translate(-150%,0);
+  }
+  /* :after */
+  .button:after {
+    content: attr(data-active);
+    transform: translate(150%,0);
+  }
+  /* Span on :hover and :active */
+  .button:hover span,
+  .button:active span {
+      opacity: 0;
+      transform: scale(0.3);
+  }
+  /* :before pseudo-element on :hover 
+      and :after pseudo-element on :active */
+  .button:hover:before,
+  .button:active:after {
+      opacity: 1;
+      transform: translate(0,0);
+      transition-delay: .4s;
+  }
+  .button:active:before {
+      transform: translate(-150%,0);
+      transition-delay: 0s;
+  }
+    </style>
 </head>
 
-<body class="h-screen bg-gray-300 font-sans">
+<body class="h-screen  font-Inter">
 
-    <nav class="bg-[#ffffff] text-black border border-blue-500 h-36">
-        <div class="max-w-7xl flex justify-between items-center mx-auto relative gap-10">
-            <a href="" class="font-bold text-3xl mt-10">TuatTA</a>
-           
-            <img src="image/logo.png" alt="Logo">
-            <ul class="flex font-semibold gap-10 mt-20 ">
-                <li><a href="" class="menu-item">HOME</a></li>
+    <!-- <div class="bg-[#ffffff] text-black border border-blue-500 h-36 flex items-center  px-4"> -->
+        <div class="rounded-full h-20 mx-auto mr-16 bg-black text-white w-[1250px] relative -mt-5"   >
+                <div class="absolute  top-10 right-10 flex justify-between gap-5 ">
+                    <div class="flex justify-center gap-4">
+                        <div class=" bg-red-900 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+                            class="size-6 to-red-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"  />
+                              </svg>
+                              
+                        </div>
+                       <div>
+                        <h1>sherajul529@gmail.com</h1>
+                       </div>
+                    </div>
+                    <div>
+                        <h1>015555555555</h1>
+                    </div>
+                    <div>
+                        <h1>+91 99991321ddd33</h1> 
+                    </div>
+                    
+                </div>
+        </div>
+
+    <div class="flex justify-between w-11/12 mx-auto items-center h-20 bg-white relative ">
+
+        <div class=" ml-36">
+            <a href="" class="font-bold text-3xl mt-10"><img src="/image/logo.jpg" class="h-[50px] w-[100px]"
+                    alt=""></a>
+
+        </div>
+
+        <div class="flex justify-between items-center h-[50px] relative gap-10">
+
+            <!-- <a href="" class="font-bold text-3xl mt-10">TuatTA</a> -->
+
+            <ul class="flex font-semibold gap-10  ">
+
+                <li><a href="" class="menu-item text-[#e31e24]">HOME</a></li>
+                <li><a href="" class="menu-item">About Us</a></li>
                 <li class="group">
-                    <a href="" class="menu-item flex gap-10 group-hover:border-white">MEGA</a>
+                    <a href="" class="menu-item flex gap-10 group-hover:border-white"> 
+                        Our Products
+                        </a>
                     <!-- MEGA MENU CONTENT -->
-                    <div class="grid grid-cols-1 w-[200px] p-5 absolute top-full left-25 bg-[#ffffff] mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
+                    <div
+                        class="grid grid-cols-1 w-[200px] p-5 absolute top-full left-25 bg-[#ffffff] mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
+                        <ul class="p-2">
+                            <li><a href="" class="mega-sub-item-title">Our Product</a></li>
+                            <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            <li><a href="" class="mega-sub-item">Sub category</a></li>
+                        </ul>
+                        <!-- <ul class="p-2">
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul>
+                            <ul class="p-2">
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul>
+                            <ul class="p-2">
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul> -->
+                        <!-- <img src="./static/img/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
+                            <img src="./static/img/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
+                            <img src="./static/img/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
+                            <img src="./static/img/JBLHorizon_001_dvHAMaster.png" alt=""> -->
+                    </div>
+                    <!-- END MEGA MENU CONTENT -->
+                </li>
+                <li class="group">
+                    <a href="" class="menu-item flex gap-10 group-hover:border-white ">Application</a>
+                    <!-- MEGA MENU CONTENT -->
+                    <div
+                        class="grid grid-cols-1 w-[200px] p-5 absolute top-full left-25 bg-[#ffffff] mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
                         <ul class="p-2">
                             <li><a href="" class="mega-sub-item-title">Product category</a></li>
                             <li><a href="" class="mega-sub-item">Sub category</a></li>
@@ -31,85 +195,49 @@
                             <li><a href="" class="mega-sub-item">Sub category</a></li>
                         </ul>
                         <!-- <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul>
-                        <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul>
-                        <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul> -->
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul>
+                            <ul class="p-2">
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul>
+                            <ul class="p-2">
+                                <li><a href="" class="mega-sub-item-title">Product category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                                <li><a href="" class="mega-sub-item">Sub category</a></li>
+                            </ul> -->
                         <!-- <img src="./static/img/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
-                        <img src="./static/img/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                        <img src="./static/img/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
-                        <img src="./static/img/JBLHorizon_001_dvHAMaster.png" alt=""> -->
+                            <img src="./static/img/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
+                            <img src="./static/img/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
+                            <img src="./static/img/JBLHorizon_001_dvHAMaster.png" alt=""> -->
                     </div>
                     <!-- END MEGA MENU CONTENT -->
                 </li>
-                <li class="group">
-                    <a href="" class="menu-item flex gap-10 group-hover:border-white ">MEGA</a>
-                    <!-- MEGA MENU CONTENT -->
-                    <div class="grid grid-cols-1 w-[200px] p-5 absolute top-full left-25 bg-[#ffffff] mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
-                        <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul>
-                        <!-- <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul>
-                        <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul>
-                        <ul class="p-2">
-                            <li><a href="" class="mega-sub-item-title">Product category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                            <li><a href="" class="mega-sub-item">Sub category</a></li>
-                        </ul> -->
-                        <!-- <img src="./static/img/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
-                        <img src="./static/img/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                        <img src="./static/img/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
-                        <img src="./static/img/JBLHorizon_001_dvHAMaster.png" alt=""> -->
-                    </div>
-                    <!-- END MEGA MENU CONTENT -->
-                </li>
-                <li class="group relative">
+                <!-- <li class="group relative">
                     <a href="" class="menu-item group-hover:border-white">DROPDOWN</a>
-                    <ul class="absolute left-0 bg-black w-max mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
+                    <ul
+                        class="absolute left-0 bg-black w-max mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
                         <li><a href="" class="menu-sub-item">Dropdown menu</a></li>
                         <li><a href="" class="menu-sub-item">Dropdown menu</a></li>
                         <li class="sub-dropdown relative">
                             <a href="" class="menu-sub-item">Dropdown menu</a>
-                            <ul class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
+                            <ul
+                                class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
                                 <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                 <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                 <li class="sub-dropdown relative">
                                     <a href="" class="menu-sub-item">Dropdown menu</a>
-                                    <ul class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
+                                    <ul
+                                        class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
                                         <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                         <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                         <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
@@ -121,7 +249,8 @@
                         </li>
                         <li class="sub-dropdown relative">
                             <a href="" class="menu-sub-item">Dropdown menu</a>
-                            <ul class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
+                            <ul
+                                class="sub-dropdown-content absolute left-full top-full bg-black w-max opacity-0 invisible transition-all duration-500">
                                 <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                 <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
                                 <li><a href="" class="menu-sub-item">Sub dropdown menu</a></li>
@@ -131,23 +260,25 @@
                         <li><a href="" class="menu-sub-item">Dropdown menu</a></li>
                         <li><a href="" class="menu-sub-item">Dropdown menu</a></li>
                     </ul>
-                </li>
-                <li><a href="" class="menu-item">BLOG</a></li>
-                <li><a href="" class="menu-item">ABOUT</a></li>
+                </li> -->
+                <li><a href="" class="menu-item">Our Blog</a></li>
+                <li><a href="" class="menu-item">Contact Us</a></li>
             </ul>
-            <ul class="flex font-semibold mt-20">
-                <li><a href="" class="menu-item">ACCOUNT</a></li>
-                <li><a href="" class="menu-item">CART</a></li>
+            <ul class="flex font-semibold ">
+                <!-- <li><a href="" class="menu-item"><button class="btn btn-outline  text-white bg-red-600">Enquire Now</button></a></li> -->
+                <button class="button" type="button" data-hover="Enquire Now" data-active="I'M ACTIVE"><span>Enquire Now </span></button>
+                <!-- <button class="button" type="button" data-hover="Enquire Now" data-active="I'M ACTIVE"><span>Enquire Now </span></button> -->
             </ul>
+            
         </div>
-    </nav>
+    </div>
+    <!-- </div> -->
 
-
-        <!-- nav bar section start -->
+    <!-- nav bar section start -->
 
     <!-- bg-no-repeat border  border-red-500 h-[80vh] bg-cover" style="background-image: url('image/blog-1.png'); -->
     <div class="hero mx-auto mt-4 bg-no-repeat lg:h-[600px] bg-cover bg-center md:h-[400px] border border-red-500"
-        style="background-image: url('image/bg1.jpg');">
+        style="background-image: url('image/bg12.jpg');">
 
         <div class="hero-content flex items-center justify-center min-h-screen text-neutral-content text-center">
             <div class="mx-auto  text-center">
@@ -180,8 +311,6 @@
     </div>
 
     <!-- Banner section start -->
-
- 
 
     <main>
         <div
